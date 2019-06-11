@@ -1,0 +1,78 @@
+<html lang = "en">
+<head>
+    <title>My first login page in bootstrap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,intial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .size-color{
+            color: blue;
+            font-size: 25px;
+        }
+       .textbox {
+
+             height: 25px !important;
+
+             width: 2200px !important;
+
+             font-size: 14px !important;
+
+                } 
+    </style>
+    <script type = "text/javascript"> 
+        function myfun(uid, pass)
+        {
+            setTimeout(function(){ 
+                var promise = new Promise(function(resolve,reject){
+                if(uid==pass){
+                    resolve();
+            }
+            else{
+                reject();
+            }
+            });
+
+            promise.
+                    then(function() {
+                                    console.log("Login Successfull");
+                                    window.location.href="file:///Users/sumeetbandgor/Downloads/login-master/login/new.html?uid="+uid+"&pass="+pass;
+                                    }).
+                    catch(function(){
+                                    console.log("Invalid");
+                                    });
+
+
+            }, 3000);
+            // console.log("uid",uid);
+        }
+        </script>
+    </head>
+    <body>
+      
+    <div class="container">
+          <h1 >my first login page</h1>
+    <!-- <form name="f1" method="post">  -->
+        <!-- <div class="form-group "> -->
+           <label for="userid" class="size-color">enter your user id </label>
+        <input type="text" id="userid" class="form-control" placeholder="please your user id" size="45"  >
+        <!-- </div> -->
+         <!-- <div class="form-group"> -->
+           <label for="password " class="size-color">enter your Password </label>
+        <input type="password" id="pass" class="form-control" placeholder="please your password" size="45" >
+        <!-- </div> -->
+        
+        
+        <!-- <div class="row"> -->
+            <!-- <div class="col-xs-4"> -->
+           <button class="btn btn-block btn-success " onclick="myfun(document.getElementById('userid').value, document.getElementById('pass').value)">Login</button>
+                    </div> <div class="col-xs-4">
+                  <!-- <a href="register.view.html"> -->
+             <!-- <button class="btn btn-block btn-primary">Registration</button></a>
+            </div>
+           
+        </div> -->
+    <!-- </form> -->
+       </div>
+        
+      
+    </body>

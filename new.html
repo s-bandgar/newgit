@@ -1,0 +1,87 @@
+<html lang = "en">
+<head>
+    <title>My first login page in bootstrap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,intial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .size-color{
+            color: blue;
+            font-size: 25px;
+        }
+       .textbox {
+
+             height: 25px !important;
+
+             width: 2200px !important;
+
+             font-size: 14px !important;
+
+                } 
+    </style>
+    </head>
+    <body>
+      
+    <div class="container">
+          <h1>Details</h1>
+        
+          <p>This is not a big deal is it</p>
+            <script>
+               
+                var uid = new URLSearchParams(window.location.search).get("uid");
+                var pass = new URLSearchParams(window.location.search).get("pass");
+                
+                        // document.write(uid);
+                        //  document.write(pass);
+                
+
+                function length()
+                {
+                    var len = document.getElementById('length').value;
+                    len = len.length;
+                    console.log(len);
+                    document.getElementById('l1').value = len;
+                }
+
+                function indexof()
+                {
+                    var str ="This is not a big deal is it";
+                    var len = document.getElementById('indexof').value;
+                    len = str.indexOf(len);
+                    document.getElementById('l2').value = len;
+                }
+
+                function lastindexof()
+                {
+                    var str ="This is not a big deal is it";
+                    var len = document.getElementById('lastindexof').value;
+                    len = str.lastIndexOf(len);
+                    document.getElementById('l3').value = len;
+                }
+
+                    </script>
+<br><br>
+                <input type="text" id="length" name="length">
+                <button onclick="length()">Length</button> = 
+                <input type="text" id="l1" name="l1"><br><br>
+
+                <input type="text" id="indexof" name="length">
+                <button onclick="indexof()">Indexof</button>
+                <input type="text" id="l2" name="l1"><br><br>
+
+                <input type="text" id="lastindexof" name="length">
+                <button onclick="lastindexof()">lastIndexOf</button>
+                <input type="text" id="l3" name="l1"><br><br>
+
+                <input type="text" id="search" name="length">
+                <button onclick="search()">search</button>
+                <input type="text" id="l4" name="l1"><br><br>
+
+                <input type="text" id="tostring" name="length">
+                <button onclick="tostring()">toString</button>
+                <input type="text" id="l5" name="l1"><br><br>
+       
+    </div>
+        
+      
+    </body>
